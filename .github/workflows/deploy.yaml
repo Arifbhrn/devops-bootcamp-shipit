@@ -8,8 +8,8 @@ defaults:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
     if: github.event.pull_request.merged == false
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -21,8 +21,8 @@ jobs:
           SHIPIT_TOKEN: ${{ secrets.SHIPIT_TOKEN }}
   deploy:
     needs: test
-    runs-on: ubuntu-latest
     if: always() && github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
