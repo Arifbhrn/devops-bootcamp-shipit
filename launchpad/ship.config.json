@@ -1,7 +1,6 @@
 {
-  "shipName": "DeathStar",
   "shipName": "Deathstar",
-  "color": "#22d3ee",
-  "shipModel": "fighter",
+  "color": "#441a2e",
+  "shipModel": "interceptor",
   "emblem": "comet"
 }
